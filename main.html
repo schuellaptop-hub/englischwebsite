@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application - [YOUR NAME]</title>
+    <meta name="description" content="Application as Insurance Advisor">
+    
+    <!-- Tailwind CSS (via CDN für einfache Nutzung ohne Build-Tools) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        /* AXA-inspired Blue Accent */
+        .accent-bg { background-color: #00008f; }
+        .accent-text { color: #00008f; }
+        
+        /* Simple Fade In Animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Paper look for the letter */
+        .letter-paper {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 5px solid #00008f;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="font-bold text-xl tracking-tight accent-text">[YOUR NAME]</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition">Home</a>
+                        <a href="#motivation" class="hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition">Cover Letter</a>
+                        <a href="#cv" class="hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition">CV</a>
+                        <a href="#contact" class="bg-blue-900 text-white hover:bg-blue-800 px-4 py-2 rounded-md text-sm font-medium transition">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto min-h-[60vh] flex flex-col md:flex-row items-center gap-12 fade-in-section">
+        <div class="md:w-1/2 space-y-6">
+            <div class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-blue-900 uppercase bg-blue-100 rounded-full">
+                Application: Insurance Advisor
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+                Ready for the <span class="accent-text">next step</span>.
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Motivated, communicative, and ready to start as a career changer at AXA General Agency Sargans. I combine a passion for people with a strong will to learn.
+            </p>
+            <div class="flex gap-4">
+                <a href="#motivation" class="bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Why me?
+                </a>
+                <a href="#cv" class="bg-white text-blue-900 border border-blue-900 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition">
+                    My Background
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center md:justify-end">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <!-- INSERT YOUR IMAGE HERE -->
+                <img src="profilbild.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Your+Name&background=00008f&color=fff&size=512'" alt="Profile Picture" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Letter Section -->
+    <section id="motivation" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Cover Letter</h2>
+            
+            <div class="letter-paper p-8 md:p-12 rounded-lg text-gray-700 leading-relaxed">
+                <!-- Header Letter -->
+                <div class="flex flex-col md:flex-row justify-between mb-12 text-sm">
+                    <div class="mb-6 md:mb-0">
+                        <p class="font-bold">[Your First Name] [Your Last Name]</p>
+                        <p>[Your Street No.]</p>
+                        <p>[Zip Code] [Your City]</p>
+                        <p>[Your Email]</p>
+                        <p>[Your Phone Number]</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-bold">AXA General Agency Sargans</p>
+                        <p>Attn: [Name of Manager, if known]</p>
+                        <p>Grossfeldstrasse 35</p>
+                        <p>7320 Sargans</p>
+                        <br>
+                        <p class="text-gray-500">[Current Date, e.g., March 4th, 2026]</p>
+                    </div>
+                </div>
+
+                <!-- Subject -->
+                <h3 class="font-bold text-lg mb-6 text-gray-900">Application as Insurance Advisor – Career Changer</h3>
+
+                <!-- Content -->
+                <p class="mb-4">
+                    Dear Sir or Madam,
+                </p>
+
+                <p class="mb-4">
+                    Insurance is more than just a contract. It is about trust and being there when it matters. I want to build this trust with customers in the Sarganserland region. I am looking for a new professional challenge, and that is why I am applying for the position at AXA.
+                </p>
+
+                <p class="mb-4">
+                    Why should you hire me? Even though I do not have experience in the insurance business yet, I have the most important skills: <strong>I am disciplined, I like to talk to people, and I learn very fast.</strong> In my previous jobs, I learned how to understand customer needs and how to explain things clearly. I am not afraid to approach new people and I take responsibility for my work.
+                </p>
+
+                <p class="mb-4">
+                    I know that AXA is one of the best insurance companies in Switzerland. The position at the General Agency in Sargans is perfect for me because of the professional training (VBV) you offer. I am ready to work hard to become a successful advisor and a valuable part of your local team.
+                </p>
+
+                <p class="mb-6">
+                    I would be very happy to introduce myself in a personal interview. Thank you for considering my application.
+                </p>
+
+                <p class="mb-8">
+                    Sincerely,
+                </p>
+
+                <p class="font-script text-2xl text-blue-900 mb-2" style="font-family: cursive;">[Your Name]</p>
+                <p class="text-sm text-gray-500">Enclosure: Curriculum Vitae</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Curriculum Vitae</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Left Column: Skills & Info -->
+                <div class="md:col-span-1 space-y-8">
+                    <!-- Personal Data -->
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Personal Details</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-900"></i> [Your City]</li>
+                            <li class="flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-2 text-blue-900"></i> [Email]</li>
+                            <li class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2 text-blue-900"></i> [Phone]</li>
+                            <li class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-blue-900"></i> [Date of Birth]</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills -->
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 rounded text-xs font-medium text-gray-700">Customer Service</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded text-xs font-medium text-gray-700">Communication</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded text-xs font-medium text-gray-700">MS Office</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded text-xs font-medium text-gray-700">English (B2)</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded text-xs font-medium text-gray-700">German (Native)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Timeline -->
+                <div class="md:col-span-2 space-y-8 border-l-2 border-gray-100 pl-8 relative">
+                    
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-900"></div>
+                        <h3 class="text-lg font-bold text-gray-900">[Current Job / School]</h3>
+                        <p class="text-sm text-blue-900 font-semibold mb-2">2023 – Present | [Company/School]</p>
+                        <p class="text-gray-600 text-sm">
+                            Short description of your current responsibilities. Focus on teamwork and responsibility.
+                            <br>• Responsible for daily tasks
+                            <br>• Contact with customers
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></div>
+                        <h3 class="text-lg font-bold text-gray-900">[Previous Apprenticeship / Job]</h3>
+                        <p class="text-sm text-blue-900 font-semibold mb-2">2020 – 2023 | [Company/School]</p>
+                        <p class="text-gray-600 text-sm">
+                            • Successfully completed apprenticeship
+                            <br>• Worked on different projects in a team
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></div>
+                        <h3 class="text-lg font-bold text-gray-900">Education</h3>
+                        <p class="text-sm text-blue-900 font-semibold mb-2">2017 – 2020 | [School Name]</p>
+                        <p class="text-gray-600 text-sm">
+                            Secondary School [Location]
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Footer -->
+    <section id="contact" class="bg-[#00008f] text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in-section">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Interested?</h2>
+            <p class="text-blue-200 mb-8 max-w-2xl mx-auto">
+                I am available for a personal interview at any time. Feel free to contact me by email or phone.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:your-email@example.com" class="flex items-center justify-center bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Send Email
+                </a>
+                <a href="tel:+41790000000" class="flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i> Call Me
+                </a>
+            </div>
+            <div class="mt-16 text-sm text-blue-400 border-t border-blue-800 pt-8">
+                &copy; 2026 [Your Name]. Created for the AXA application process.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Simple Intersection Observer for Fade-In Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
